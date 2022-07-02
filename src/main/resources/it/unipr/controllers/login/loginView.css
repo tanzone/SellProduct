@@ -1,0 +1,24 @@
+/*
+    pine tree       #1F271B
+    blue sapphire   #19647E
+    verdigris       #28AFB0
+*/
+
+
+.btnLogin:hover{
+    -fx-background-color: #28AFB0;
+}
+
+.textField{
+    -fx-background-color:   transparent;
+    -fx-border-color:       #19647E;
+    -fx-border-width:       0px 0px 2px 0px;
+}
+
+.blue{
+    -fx-background-color: #19647E;
+}
+
+.verdigris{
+    -fx-background-color: #28AFB0;
+}

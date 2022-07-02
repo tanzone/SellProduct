@@ -1,0 +1,109 @@
+.btnMenuEmployee{
+    -fx-background-color: transparent;
+    -fx-border-color: #28AFB0;
+    -fx-border-width: 2px;
+}
+
+.btnMenuEmployee:hover{
+    -fx-background-color: #28AFB0;
+}
+
+#logout{
+    -fx-border-color: #F55D3E;
+}
+
+#logout:hover{
+    -fx-background-color: #F55D3E;
+}
+
+
+.no_border{
+    -fx-focus-color: transparent;
+}
+
+
+.header
+{
+    -fx-text-fill: #003459;
+    -fx-background-color: white;
+    -fx-border-color: #000;
+}
+
+.addProduct
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #32CD32;
+}
+
+.addProduct:hover
+{
+    -fx-background-color: #32CD32;
+    -fx-border-color: #32CD32;
+}
+
+
+
+/*CSS degli item*/
+
+.row
+{
+    -fx-background-color: white;
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}
+
+.deleteUser
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #F55D3E;
+}
+
+.deleteUser:hover
+{
+    -fx-background-color: #F55D3E;
+    -fx-border-color: #F55D3E;
+}
+
+.deleteOrder
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #32CD32;
+}
+
+.deleteOrder:hover
+{
+    -fx-background-color: #32CD32;
+    -fx-border-color: #32CD32;
+}
+
+.item{
+    -fx-border-color: #28AFB0;
+    -fx-text-fill: #003459;
+    -fx-border-width: 2px;
+}
+
+.btnToggle{
+    -fx-background-color: #19647E;
+    -fx-text-fill: white;
+    -fx-background-radius: 30;
+}
+.btnToggle:hover{
+    -fx-background-color: #28AFB0;
+}
+.btnToggle:selected{
+    -fx-background-color: #1F271B;
+}
+
+#leftToggle{
+    -fx-background-radius: 10 0 0 10;
+}
+#rightToggle{
+    -fx-background-radius: 0 10 10 0;
+    -fx-border-width: 0px 0px 0px 1px;
+    -fx-border-color: white;
+}

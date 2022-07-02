@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@employeeView.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipr.controllers.employee.EmployeeController">
+    <children>
+        <BorderPane layoutX="-11.0" layoutY="2.0" prefHeight="810.0" prefWidth="1315.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <VBox prefHeight="200.0" prefWidth="435.0" styleClass="right-bar" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+                            <children>
+                                <Label prefHeight="49.0" prefWidth="128.0" text="Unipr" textFill="#003459">
+                                    <font>
+                                        <Font name="Cambria Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Shop" textFill="#878787">
+                                    <font>
+                                        <Font name="Cambria" size="40.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Pane prefHeight="29.0" prefWidth="435.0">
+                     <children>
+                        <Label fx:id="employeeUsername" alignment="CENTER" layoutX="172.0" layoutY="-17.0" prefHeight="62.0" prefWidth="92.0" text="username" textFill="#878787" wrapText="true">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+                  <Pane prefHeight="673.0" prefWidth="435.0">
+                     <children>
+                        <Separator prefHeight="60.0" prefWidth="435.0" />
+                        <VBox fx:id="actionOrder" alignment="TOP_CENTER" prefHeight="673.0" prefWidth="435.0" visible="false">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="118.0" prefWidth="435.0" text="MANAGE ORDERS">
+                                 <font>
+                                    <Font name="Cambria Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="50.0" prefWidth="435.0" text="Send orders by USERNAME">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="25.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets top="58.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="54.0" prefWidth="435.0">
+                                 <children>
+                                    <TextField fx:id="txtUsernameOrder" prefHeight="100.0" prefWidth="484.0" promptText="Insert USERNAME">
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Cambria" size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button mnemonicParsing="false" onAction="#orderUsername" prefHeight="128.0" prefWidth="304.0" styleClass="addProduct" stylesheets="@employeeView.css" text="CONFIRM">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Label prefHeight="50.0" prefWidth="435.0" text="Send orders by PRODUCT ID">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="25.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets top="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="54.0" prefWidth="435.0">
+                                 <children>
+                                    <TextField fx:id="txtProductOrder" prefHeight="100.0" prefWidth="484.0" promptText="Insert PRODUCT ID">
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Cambria" size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button mnemonicParsing="false" onAction="#orderProduct" prefHeight="128.0" prefWidth="304.0" styleClass="addProduct" stylesheets="@employeeView.css" text="CONFIRM">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="actionWarehouse" alignment="CENTER" prefHeight="673.0" prefWidth="435.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ToggleButton id="leftToggle" fx:id="toggleBtnAdd" mnemonicParsing="false" onAction="#toggleAdd" prefWidth="100.0" styleClass="btnToggle" text="Add">
+                                       <HBox.margin>
+                                          <Insets left="118.0" top="50.0" />
+                                       </HBox.margin>
+                                    </ToggleButton>
+                                    <ToggleButton id="rightToggle" fx:id="toggleBtnReplenish" mnemonicParsing="false" onAction="#toggleReplenish" prefWidth="100.0" styleClass="btnToggle" text="Replenish">
+                                       <HBox.margin>
+                                          <Insets top="50.0" />
+                                       </HBox.margin>
+                                    </ToggleButton>
+                                 </children>
+                              </HBox>
+                              <Pane prefHeight="673.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fx:id="add" prefHeight="665.0" prefWidth="435.0" visible="false">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="57.0" prefWidth="435.0" text="Product's ID">
+                                             <font>
+                                                <Font name="Cambria Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtProductWarehouse" promptText="Insert Product ID">
+                                             <font>
+                                                <Font name="Cambria" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="40.0" right="40.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" prefHeight="57.0" prefWidth="435.0" text="Product's NAME">
+                                             <font>
+                                                <Font name="Cambria Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtNameWarehouse" promptText="Insert Product NAME">
+                                             <font>
+                                                <Font name="Cambria" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="40.0" right="40.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" prefHeight="57.0" prefWidth="435.0" text="Product's BRAND">
+                                             <font>
+                                                <Font name="Cambria Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtBrandWarehouse" promptText="Insert Product BRAND">
+                                             <font>
+                                                <Font name="Cambria" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="40.0" right="40.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" prefHeight="57.0" prefWidth="435.0" text="Product's PRICE">
+                                             <font>
+                                                <Font name="Cambria Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtPriceWarehouse" promptText="Insert Product PRICE">
+                                             <font>
+                                                <Font name="Cambria" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="40.0" right="40.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" prefHeight="57.0" prefWidth="435.0" text="Product's QUANTITY">
+                                             <font>
+                                                <Font name="Cambria Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtQuantityWarehouse" promptText="Insert Product QUANTITY">
+                                             <font>
+                                                <Font name="Cambria" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="40.0" right="40.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addProduct" prefHeight="66.0" prefWidth="221.0" styleClass="addProduct" text="ADD PRODUCT" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="Cambria" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="107.0" top="40.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="replenish" prefHeight="665.0" prefWidth="435.0">
+                                       <children>
+                                          <Label prefHeight="50.0" prefWidth="435.0" text="Replenish by PRODUCT ID">
+                                             <font>
+                                                <Font name="Cambria Bold" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="25.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets top="50.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox prefHeight="54.0" prefWidth="435.0">
+                                             <children>
+                                                <TextField fx:id="txtProductReplenish" prefHeight="58.0" prefWidth="150.0" promptText="Product Id">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Cambria" size="15.0" />
+                                                   </font>
+                                                </TextField>
+                                                <TextField fx:id="txtQuantityReplenish" prefHeight="58.0" prefWidth="150.0" promptText="Quantity">
+                                                   <font>
+                                                      <Font name="Cambria" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button mnemonicParsing="false" onAction="#replenishProduct" prefHeight="58.0" prefWidth="120.0" styleClass="addProduct" stylesheets="@employeeView.css" text="CONFIRM">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="50.0" prefWidth="435.0" text="Replenish All Products">
+                                             <font>
+                                                <Font name="Cambria Bold" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="25.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets top="30.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox prefHeight="54.0" prefWidth="435.0">
+                                             <children>
+                                                <TextField fx:id="txtQuantityReplenishAll" prefHeight="54.0" prefWidth="300.0" promptText="Quantity">
+                                                   <font>
+                                                      <Font name="Cambria" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button mnemonicParsing="false" onAction="#replenishAll" prefHeight="58.0" prefWidth="120.0" styleClass="addProduct" stylesheets="@employeeView.css" text="CONFIRM">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="50.0" prefWidth="435.0" text="Replenish All Out-Of-Stock Products">
+                                             <font>
+                                                <Font name="Cambria Bold" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="25.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets top="30.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox prefHeight="54.0" prefWidth="435.0">
+                                             <children>
+                                                <TextField fx:id="txtQuantityReplenishAllOutOfStock" prefHeight="54.0" prefWidth="300.0" promptText="Quantity">
+                                                   <font>
+                                                      <Font name="Cambria" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button mnemonicParsing="false" onAction="#replenishAllOutOfStock" prefHeight="58.0" prefWidth="120.0" styleClass="addProduct" stylesheets="@employeeView.css" text="CONFIRM">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <ToggleButton fx:id="toggleBtnShowOutOfStock" mnemonicParsing="false" onAction="#toggleOutOfStock" styleClass="btnToggle" text="Show Out-of-Stock">
+                                             <VBox.margin>
+                                                <Insets left="129.0" top="30.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </ToggleButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="actionUser" alignment="TOP_CENTER" prefHeight="673.0" prefWidth="435.0" visible="false">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="118.0" prefWidth="435.0" text="MANAGE USERS">
+                                 <font>
+                                    <Font name="Cambria Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="435.0" text="Username">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="60.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtUsernameUser" promptText="Insert Username">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="40.0" right="40.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="435.0" text="Password">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="60.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtPasswordUser" promptText="Insert Password">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="40.0" right="40.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addUser" prefHeight="66.0" prefWidth="221.0" styleClass="addProduct" text="ADD USER" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="75.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="actionEmployee" alignment="TOP_CENTER" prefHeight="673.0" prefWidth="435.0" visible="false">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="118.0" prefWidth="435.0" text="MANAGE EMPLOYEE">
+                                 <font>
+                                    <Font name="Cambria Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="435.0" text="Username">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="60.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtUsernameEmpl" promptText="Insert Username">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="40.0" right="40.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="435.0" text="Password">
+                                 <font>
+                                    <Font name="Cambria Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="60.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="txtPasswordEmpl" promptText="Insert Password">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="40.0" right="40.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addEmployee" prefHeight="66.0" prefWidth="221.0" styleClass="addProduct" text="ADD EMPLOYEE" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="75.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                    </children>
+                </VBox>
+            </left>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0">
+                            <children>
+                        <Button fx:id="btnManageOrders" mnemonicParsing="false" onAction="#manageOrders" prefHeight="65.0" prefWidth="173.0" styleClass="btnMenuEmployee" text="Manage Orders" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="2.0" top="25.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/order-delivery.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnManageWarehouse" mnemonicParsing="false" onAction="#manageWarehouse" prefHeight="65.0" prefWidth="173.0" styleClass="btnMenuEmployee" text="Manage Warehouse" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="2.0" top="25.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/warehouse.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnManageUsers" mnemonicParsing="false" onAction="#manageUsers" prefHeight="65.0" prefWidth="173.0" styleClass="btnMenuEmployee" text="Manage Users" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="2.0" top="25.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/group.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnManageEmployees" mnemonicParsing="false" onAction="#manageEmployees" prefHeight="65.0" prefWidth="173.0" styleClass="btnMenuEmployee" text="Manage Employees" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="2.0" top="25.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/company.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="logout" mnemonicParsing="false" onAction="#logout" prefHeight="65.0" prefWidth="173.0" styleClass="btnMenuEmployee" text="Logout" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="2.0" top="25.0" />
+                           </HBox.margin>
+                        </Button>
+                            </children>
+                        </HBox>
+                  <Pane prefHeight="80.0" prefWidth="880.0" />
+                  <HBox prefHeight="65.0" prefWidth="880.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Pane prefHeight="60.0" prefWidth="935.0">
+                           <children>
+                              <HBox fx:id="headerPerson" prefHeight="60.0" prefWidth="880.0" visible="false">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="293.0" styleClass="header" stylesheets="@employeeView.css" text="USERNAME">
+                                       <font>
+                                          <Font name="Cambria Bold" size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="293.0" styleClass="header" stylesheets="@employeeView.css" text="PASSWORD">
+                                       <font>
+                                          <Font name="Cambria Bold" size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="294.0" styleClass="header" stylesheets="@employeeView.css" text="DELETE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="headerWarehouse" prefHeight="60.0" prefWidth="880.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="146.0" styleClass="header" stylesheets="@employeeView.css" text="PRODUCT ID" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Cambria Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="146.0" styleClass="header" stylesheets="@employeeView.css" text="NAME" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Cambria Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="147.0" styleClass="header" stylesheets="@employeeView.css" text="BRAND" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Cambria Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="147.0" styleClass="header" stylesheets="@employeeView.css" text="PRICE" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Cambria Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="147.0" styleClass="header" stylesheets="@employeeView.css" text="QUANTITY" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Cambria Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelDelete" alignment="CENTER" prefHeight="63.0" prefWidth="147.0" styleClass="header" stylesheets="@employeeView.css" text="DELETE" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Cambria Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="headerOrder" prefHeight="60.0" prefWidth="880.0" visible="false">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="63.0" prefWidth="110.0" styleClass="header" stylesheets="@employeeView.css" text="ORDER ID" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Cambria Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="110.0" styleClass="header" stylesheets="@employeeView.css" text="USERNAME" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Cambria Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="110.0" styleClass="header" stylesheets="@employeeView.css" text="PRODUCT ID" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Cambria Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="110.0" styleClass="header" stylesheets="@employeeView.css" text="NAME">
+                                       <font>
+                                          <Font name="Cambria Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="110.0" styleClass="header" stylesheets="@employeeView.css" text="BRAND">
+                                       <font>
+                                          <Font name="Cambria Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="110.0" styleClass="header" stylesheets="@employeeView.css" text="QUANTITY">
+                                       <font>
+                                          <Font name="Cambria Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="110.0" styleClass="header" stylesheets="@employeeView.css" text="TOTAL">
+                                       <font>
+                                          <Font name="Cambria Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="110.0" styleClass="header" stylesheets="@employeeView.css" text="CONFIRM" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Cambria Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="589.0" prefWidth="880.0" styleClass="no_border" stylesheets="@employeeView.css">
+                     <children>
+                        <ScrollPane prefHeight="700.0" prefWidth="880.0" styleClass="no_border">
+                           <content>
+                              <GridPane fx:id="grid" gridLinesVisible="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="880.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ScrollPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMousePressed="#click" prefHeight="234.0" prefWidth="265.0" stylesheets="@userView.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipr.controllers.user.CardController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="63.0" layoutY="8.0" prefHeight="215.0" prefWidth="225.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="img" fitHeight="115.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/Orders.png" />
+                    </image>
+                </ImageView>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="30.0" prefWidth="122.0" text="Id          :" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria Bold" size="24.0" />
+                            </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                        </Label>
+                        <Label fx:id="productId" prefHeight="40.0" prefWidth="155.0" text="id" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="52.0" prefWidth="122.0" text="Name  : " textFill="WHITE">
+                            <font>
+                                <Font name="Cambria Bold" size="24.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="productName" prefHeight="49.0" prefWidth="155.0" text="name" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="52.0" prefWidth="122.0" text="Brand :" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="productBrand" prefHeight="49.0" prefWidth="155.0" text="brand" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="52.0" prefWidth="122.0" text="Price   :" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria Bold" size="24.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="productPrice" prefHeight="49.0" prefWidth="155.0" text="€0.00" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+        </VBox>
+    </children>
+    <styleClass>
+        <String fx:value="product-item" />
+        <String fx:value="shadow" />
+    </styleClass>
+</AnchorPane>

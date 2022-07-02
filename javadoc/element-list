@@ -1,0 +1,9 @@
+module:it.unipr.shopfx
+it.unipr.accounts
+it.unipr.controllers.employee
+it.unipr.controllers.login
+it.unipr.controllers.user
+it.unipr.filemanager
+it.unipr.main
+it.unipr.utilities
+it.unipr.warehouse

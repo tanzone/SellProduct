@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" stylesheets="@loginView.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipr.controllers.login.LoginController">
+   <children>
+      <BorderPane layoutX="7.0" prefHeight="810.0" prefWidth="1315.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="810.0" prefWidth="656.0" styleClass="blue" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="WHITE" layoutX="239.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unipr">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="354.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shop">
+                     <font>
+                        <Font name="Cambria" size="40.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="243.0" layoutY="94.0">
+                     <image>
+                        <Image url="@../../main/appLogo.png" />
+                     </image>
+                  </ImageView>
+                  <ComboBox fx:id="loginChoiceBox" layoutX="227.0" layoutY="436.0" prefHeight="35.0" prefWidth="232.0" promptText="Type of login" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="810.0" prefWidth="656.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="fieldUser" layoutX="248.0" layoutY="361.0" promptText="Username" scaleX="1.4" scaleY="1.4" styleClass="textField">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font></TextField>
+                  <PasswordField fx:id="fieldPassword" layoutX="248.0" layoutY="456.0" promptText="Password" scaleX="1.4" scaleY="1.4" styleClass="textField">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font></PasswordField>
+                  <Button defaultButton="true" layoutX="303.0" layoutY="544.0" mnemonicParsing="false" onAction="#checkLogin" prefHeight="37.0" prefWidth="112.0" scaleX="1.2" scaleY="1.2" stylesheets="@loginView.css" text="ENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnLogin" />
+                        <String fx:value="blue" />
+                     </styleClass></Button>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="70.0" layoutY="371.0" scaleX="0.2" scaleY="0.2">
+                     <image>
+                        <Image url="@../images/lock.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="70.0" layoutY="276.0" scaleX="0.2" scaleY="0.2">
+                     <image>
+                        <Image url="@../images/userIcon.png" />
+                     </image>
+                  </ImageView>
+                  </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

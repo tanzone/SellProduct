@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="878.0" styleClass="row" stylesheets="@employeeView.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipr.controllers.employee.OrderController">
+   <children>
+      <HBox prefHeight="70.0" prefWidth="878.0" styleClass="item">
+         <children>
+            <Label fx:id="idOrder" alignment="CENTER" prefHeight="70.0" prefWidth="110.0" text="IdOrder">
+               <font>
+                  <Font name="Cambria Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="username" alignment="CENTER" prefHeight="114.0" prefWidth="110.0" text="Username">
+               <font>
+                  <Font name="Cambria" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="idProduct" alignment="CENTER" prefHeight="70.0" prefWidth="110.0" text="IdProduct">
+               <font>
+                  <Font name="Cambria" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="name" alignment="CENTER" prefHeight="114.0" prefWidth="110.0" text="Name">
+               <font>
+                  <Font name="Cambria" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="brand" alignment="CENTER" prefHeight="114.0" prefWidth="110.0" text="Brand">
+               <font>
+                  <Font name="Cambria" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="quantity" alignment="CENTER" prefHeight="114.0" prefWidth="110.0" text="Quantity">
+               <font>
+                  <Font name="Cambria" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="totPrice" alignment="CENTER" prefHeight="110.0" prefWidth="110.0" text="Price">
+               <font>
+                  <Font name="Cambria" size="25.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#deleteOrder" prefHeight="45.0" prefWidth="67.0" styleClass="deleteOrder" stylesheets="@employeeView.css">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/check-mark.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="21.0" right="5.0" top="7.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
